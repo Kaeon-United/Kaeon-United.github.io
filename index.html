@@ -4,8 +4,8 @@
 
 	function executeCommand(args) {
 
-		require("kaeon-united")("aceUtils").traceKaeonACE(
-			require("kaeon-united")(),
+		use("kaeon-united")("aceUtils").traceKaeonACE(
+			use("kaeon-united")(),
 			[
 				{
 					components: {
@@ -18,7 +18,7 @@
 				}
 			]
 		).map(item => {
-			return require(Object.keys(item.components.locations)[0]);
+			return use(Object.keys(item.components.locations)[0]);
 		}).forEach((item) => {
 
 			try {
